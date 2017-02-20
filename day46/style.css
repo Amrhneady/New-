@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-color: cadetblue;
+}
+
+.black {
+    background-color: brown;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+.mylist {
+        list-style-type: none;
+
+}

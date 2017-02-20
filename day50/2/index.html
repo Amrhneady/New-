@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="Myapp" ng-controller="myCtrl">
+   <div class="container"><br><br>
+<div class="row yellow"><br>
+    <img src="img/mygamelist.png"><br><br>
+</div><br><br>
+  <div class="row center">
+      <div class="col-md-4">
+          <input ng-model="title" placeholder="title" style="text-align: center" >
+      </div>
+      <div class="col-md-4">
+          <input ng-model="url" placeholder="Your Game image" style="text-align: center">
+      </div>
+      <div class="col-md-4">
+          <input ng-model="des" placeholder="description" style="text-align: center">
+      </div>
+  </div><br><br>
+<div class="row">
+    <button class="btn btn-danger" ng-button="add()">add Your Game Information</button>
+</div><br><br>
+<div class="row">
+      <div ng-repeat="item in items track by $index">
+        <p>{{item.title}}</p>
+        <p>{{item.des}}</p>
+        <img ng-src="{{item.url}}" width="150px" height="150px">
+    </div>
+</div>
+
+   </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/storge.js"></script>
+</body>
+</html>

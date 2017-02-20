@@ -1,0 +1,63 @@
+.enemiesBox{
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    text-align: center;
+    background-color: red;
+}
+.final{
+    text-align: center;
+}
+img {
+  width: 75%;
+  height: 150px;
+}
+h1 {
+    text-align: center;
+    background-color: black;
+    text-decoration-color: darkred;
+    text-decoration-style: wavy;
+    color: red;
+}
+#enemy{
+ 
+ 
+}
+body {
+    background-image: url(bloody_forest_by_queenofrohan.jpg);
+    background-size: cover;
+    
+    
+}
+@media (max-width: 500px) {
+    .enemiesBox {
+        width: 100%;
+        background-color: black;  
+    }
+     
+}
+
+@media (min-width: 500px) {
+    .enemiesBox{
+        background-color: #D5000;
+    }
+        
+}
+#mario{
+    float: left;
+    width: 10%;
+    height:80px;
+    margin-left: 24%;
+}
+#link{
+    text-align: center;
+    margin:9%;
+}
+h3 {
+    color: red;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    background-color: black;
+}

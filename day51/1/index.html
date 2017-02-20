@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> My Favorite Country</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <p class="navbar-brand">CANADA</p>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+
+                        <li><a href="#/Home">Home</a></li>
+                        <li><a href="#/About">About</a></li>
+                        <li><a href="#/Whyilove">Whyilove</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <ng-view></ng-view>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="views/About/About.app.js"></script>
+    <script src="views/home/home.app.js"></script>
+    <script src="views/whyilove/whyilove.app.js"></script>
+</body>
+</html>

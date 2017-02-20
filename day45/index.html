@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Exersice</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel=stylesheet type="text/css" href="style.css">
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+              <h1>My Mom Shopping list</h1> 
+           </div>
+       </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div ng-controller="mainCtrl">
+                    <input ng-model="std" placeholder="enter your name" class="form-control">
+                    <button ng-click="add()" class="btn btn-success">Add</button>
+
+                    <ul ng-repeat="name in names track by $index">
+                        <li>
+                            <button  class="btn btn-danger"  ng click="remove($name)">X</button>
+                           {{""}} {{""}} {{name}} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="Scrip.js"></script>
+</body>
+
+</html>

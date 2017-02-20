@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mighty Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel=stylesheet type="text/css" href="style.css">
+</head>
+
+<body ng-app="myApp" ng-controner="mainCtrl">
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 black">
+                <h1>Mighty Clicker</h1>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <img src="Untitled.png"> </div>
+            <div class="col-md-2"></div>
+        </div>
+        <br>
+        <div class="row color">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <h1 ng-modl="redValue">{{redValue}}</h1>
+                <br>
+                <button ng-click="RedAdd()" class="btn btn-danger">RED</button>
+
+            </div>
+            <div class="col-md-4">
+                <h1 ng-modal="blueValue">{{blueValue}}</h1>
+                <br>
+                <button ng-click="BlueAdd()" class="btn btn-primary">BLUE</button>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+    </div>
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

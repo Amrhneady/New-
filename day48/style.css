@@ -1,0 +1,42 @@
+body {
+    margin-top: 20px;
+    background-image: url(1.jpg);
+}
+.header{
+   text-align: left;
+    color: white;
+    height: 100px;
+    padding: 10px;
+    border: blue 1px solid;
+    margin-top=10px;
+    background-color: black;
+}
+.data{
+    margin-top:20px;
+    text-align: center;
+    background-color: blue(0.3);
+}
+
+.data p{
+    color: white;
+    font-family: arial;
+    font-size:25px;
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+}
+.data img{
+    border:  1px solid blue;
+    text-align: center;
+    width: 100%;
+    
+}
+.title {
+    position: relative;
+    bottom: 28px;
+}
+.transbox {
+    background-color: blue;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}

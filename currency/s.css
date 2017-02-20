@@ -1,0 +1,12 @@
+body {
+    background-image:url(1.jpg);
+    background-size: cover;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+h1 {
+    font-size: 100px;
+    color: azure;
+    background-color: green;
+}

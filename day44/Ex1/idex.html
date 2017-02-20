@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body ng-app="app">
+    <div ng-controller="mycut">
+        <input type="text" placeholder="first name" ng-model="first">
+        <input type="text" placeholder="Second name" ng-model="Second">
+        <input type="text" placeholder="Age" ng-model="age">
+        <div>{{first +" " + Second +""+ age}}</div>
+    </div>
+
+<script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>

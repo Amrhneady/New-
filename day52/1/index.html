@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pockemon File</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel=stylesheet type="text/css" href="style.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container">
+       <br><br>
+       <div class="row">
+           <div class="col-md-3"></div>
+           <div class="col-md-6">
+               <img src="1.png" width="50%">
+           </div>
+           <div class="col-md-3"></div>
+       </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div>
+                    <p>Enter Pokemon Number:</p>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div>
+                   <input class="form-control" ng-model="number" placeholder="Enter your Pokemon number" style="text-align: center">
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div><br>
+        <div class="row">
+           <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <button class="btn btn-primary" ng-click="getPokemon()" placeholder="Get Pokemon" style="text-align: center">Get Pokemon</button>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div>
+                   <p>{{name}}</p>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+<script src="getPokemon.js"></script>
+</body>
+
+</html>
