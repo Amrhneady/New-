@@ -7,12 +7,12 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="sidebar/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
     <!-- Custom CSS -->
     <link href="sidebar/css/simple-sidebar.css" rel="stylesheet">
 </head>
 
-<body ng-controller="rootCtrl">
+<body ng-app="myApp">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="container-fluid">
@@ -70,8 +70,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <h1>YouTube</h1>
+                        <p style="text-align:justify">YouTube is an American video-sharing website headquartered in San Bruno, California. The service was created by three former PayPal employees—Chad Hurley, Steve Chen, and Jawed Karim—in February 2005. Google bought the site in November 2006 for US$1.65 billion;[4] YouTube now operates as one of Google's subsidiaries.[5] The site allows users to upload, view, rate, share, add to favorites, report and comment on videos, and it makes use of WebM, H.264/MPEG-4 AVC, and Adobe Flash Video technology to display a wide variety of user-generated and corporate media videos. Available content includes video clips, TV show clips, music videos, short and documentary films, audio recordings, movie trailers and other content such as video blogging, short original videos, and educational videos.</p>
                         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
@@ -95,6 +95,7 @@
     <div ng-view></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="https://js.arcgis.com/4.2/"></script>
     <script src="view/app.js"></script>
 </body>
 
