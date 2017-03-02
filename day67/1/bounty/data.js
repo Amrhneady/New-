@@ -2,28 +2,28 @@ var uuid = require("uuid");
 var list= [
     {
         id : uuid.v4(),
-        firstName:"Amr",
+        FirstName:"Amr",
         SecondName:"Hneady",
         Living: true,
-        bountyAmont: 55,
-        type: "Sith"
+        BountyAmont: 55,
+        Type: "Sith"
     },
     {
         id : uuid.v4(),
-        firstName:"Nadar",
+        FirstName:"Nadar",
         SecondName:"Nasab",
         Living: false,
-        bountyAmont: 44,
-        type: "Sith"
+        BountyAmont: 44,
+        Type: "Sith"
     },
     {
         id : uuid.v4(),
-        firstName:"Mohamad",
+        FirstName:"Mohamad",
         SecondName:"Aziz",
         Living: true,
-        bountyAmont: 36,
-        type: "kedi"
+        BountyAmont: 36,
+        Type: "kedi"
     },
 ]
 
-module.exports=list;
+module.exports = list;
