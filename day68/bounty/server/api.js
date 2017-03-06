@@ -1,17 +1,13 @@
 var express = require("express");
-var bodyParser = require("body-parser");
-var list = require("./data.js");
-var vaildate = require("./utils.js");
+var apiRouter = express.Router();
 var uuid = require("uuid");
-var app = express();
-var port = process.env.Port || 8080;
 
-app.use(bodyParser.urlencoded({
-    extended: false
-}));
-app.use(bodyParser.json());
 
-app.get("/bounty", function (req, res) {
+var list = require("./data.js");
+
+
+
+apiRouter.get("/", function (req, res) {
     if (Object.keys(req.query).length === 0) {
         res.status(200).send({
             "messae": "here is my data",
@@ -19,7 +15,7 @@ app.get("/bounty", function (req, res) {
         })
     } else {
         var filteredData = [];
-        for (key in req.query) {
+        for (key in req.que/y) {
             for (var i = 0; i < list.length; i++) {
                 if (req.query[key] == list[i][key]) {
                     filteredData.push(list[i]);
@@ -33,7 +29,7 @@ app.get("/bounty", function (req, res) {
         })
     }
 });
-app.post("/bounty", function (req, res) {
+apiRouter.post("/", function (req, res) {
     var data = {
         id: uuid.v4(),
         FirstName: req.body.FirstName,
@@ -54,7 +50,7 @@ app.post("/bounty", function (req, res) {
         });
     }
 });
-app.delete("/bounty/:id", function (req, res) {
+apiRouter.delete("/:id", function (req, res) {
     var id = req.params.id;
     for (var i = 0; i < list.lenght; i++) {
         if (list[i].id == id) {
@@ -68,19 +64,20 @@ app.delete("/bounty/:id", function (req, res) {
         message: "no item with this id " + id
     })
 });
-app.put("/bounty/:id", function (req, res) {
-    
-    for(var i=0; i<list.length; i++){
-        if(list[i].id == req.params.id){
-            for(key in list[i]){
-                if(req.query[key] !== undefined && req.query[key] !== ""){
+apiRouter.put("/:id", function (req, res) {
+
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].id == req.params.id) {
+            for (key in list[i]) {
+                if (req.query[key] !== undefined && req.query[key] !== "") {
                     list[i][key] = req.query[key]
                 }
             }
-            res.status(200).send({"message":"You are updated the data"})
+            res.status(200).send({
+                "message": "You are updated the data"
+            })
         }
     }
 });
-app.listen(port, function () {
-    console.log("I'm listening on" + " " + port + " " + "and an running fine")
-});
+
+module.exports = apiRouter
