@@ -1,0 +1,137 @@
+<div class="back-arrow">
+    <div class="container">
+        <div class="row text-left">
+            <div class="col-md-12">
+                <a href="#/home">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" ng-init="loadData()" ng-show="showIssue">
+    <div class="row text-center">
+        <div class="col-md-8 col-md-offset-2">
+           <div class="white-back">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="issue-box-one">
+                        <div class="row">
+                            <div class="col-xs-10 text-left">
+                                <div class="issue-title">
+                                    <h2 ng-show="showTitle">
+                                           {{issue.title}}
+                                    </h2>
+                                    <input type="text" ng-model="issue.title" ng-init="issue.title" ng-show="titleInput" class="form-control">
+                                </div>
+                            </div>
+                            <div class="btns text-right">
+                                <div class="remove-btn">
+                                    <button class="btn btn-danger">
+                                        <i class="glyphicon glyphicon-remove" ng-click="delIssue(issue._id)" class="text-right">
+                                        </i>
+                                    </button>
+                                </div>
+                                <div class="edit-btn">
+                                    <button class="btn btn-success">
+                                        <i class="glyphicon glyphicon-pencil" class="text-right" ng-click="showEdit()" ng-show="editBtn">
+                                        </i>
+                                        <i class="glyphicon glyphicon-ok" class="text-right" ng-click="updateIssue(issue._id,issue.title,issue.description)" ng-show="okBtn">
+                                        </i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-left">
+                            <div class="col-md-12">
+                                <div ng-show="showDesc" class="desc">
+                                    {{issue.description}}
+                                </div>
+                                <textarea ng-model="issue.description" ng-init="issue.description" ng-show="descInput" class="form-control">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="vote-row">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <span class="upvote">
+                                                <button class="btn btn-info btn-sm">
+                                                    <i class="glyphicon glyphicon-thumbs-up" ng-click="upvote(issue._id, issue.upvote,issue.totalVote)">
+                                                </i>
+                                                </button>
+                                                <span class="vote-num">{{issue.upvote}}</span>
+                                            </span>
+                                            <span class="downvote">
+                                                <button class="btn btn-danger btn-sm">
+                                                    <i class="glyphicon glyphicon-thumbs-down" ng-click="downvote(issue._id,issue.downvote,issue.totalVote)">
+                                                </i>
+                                                </button>
+                                                <span class="vote-num">{{issue.downvote}}</span>
+                                            </span>
+                                            <span class="comments-icon">
+                                               <button class="btn btn-success btn-sm">
+                                                        <i class="glyphicon glyphicon-comment"></i>
+                                               </button>
+                                                <span class="vote-num">
+                                                    {{issue.comments.length}}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-border">
+                            <div class="row text-left">
+                                <div class="col-md-12">
+                                    <b>Total Votes: {{issue.totalVote}}</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-section">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div ng-repeat="comment in issue.comments track by $index">
+                                        <div class="row">
+                                            <div class="col-md-11 text-left">
+                                                <span class="comment">
+                                                    {{issue.comments.length}} - {{comment}}
+                                                </span>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button class="btn btn-danger btn-xs">
+                                                    <span class="del-comment-btn">
+                                                     <i class="glyphicon glyphicon-remove" ng-click="delComment(issue._id, $index)" class="text-right">
+                                                     </i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="comment-textarea">
+                                        <form name="commentForm">
+                                            <textarea ng-model="newComment" class="form-control" required>
+                                            </textarea>
+                                        </form>
+                                    </div>
+                                    <div class="add-comment-btn">
+                                        <button ng-click="addComment(issue._id, newComment)" class="btn btn-primary" ng-disabled="commentForm.$invalid">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

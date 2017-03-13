@@ -1,0 +1,199 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.white-back {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px
+}
+
+body {
+    background-image: url(pexels-photo-132995.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.ng-cloak {
+    display: none !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.rock-the-vote a {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.navbar {
+    background: #004D40;
+    border: 1px solid #004D40
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: #B2DFDB !important;
+}
+
+.navbar li a {
+    font-size: 20px;
+}
+
+.navbar i {
+    color: white;
+}
+
+.issue-title {
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 15px;
+}
+
+.issue-title a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.issue-box {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    color: black;
+    border-bottom: 2px solid black
+}
+
+.issue-box-one {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    color: black;
+}
+
+i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+b {
+    font-size: 20px;
+}
+
+.add-issue {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.comments-icon a {
+    color: white !important;
+}
+
+.add-comment-btn {
+    margin-top: 10px;
+}
+
+.comment-textarea {
+    margin-top: 30px;
+}
+
+.comment {
+    font-size: 20px;
+}
+
+.comment-link {
+    color: white !important;
+}
+
+.comment-link:hover {
+    text-decoration: none;
+}
+
+.new-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.new-desc {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.desc {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.desc::selection {
+    background:
+}
+
+.vote-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.vote-num {
+    font-size: 15px;
+    margin-left: 10px
+}
+
+.upvote {
+    margin-right: 10px;
+}
+
+.downvote {
+    margin-right: 10px;
+}
+
+.remove-btn,
+.edit-btn {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.new-issue {
+    margin-bottom: 70px;
+}
+
+.new-issue-fields {
+    color: black;
+}
+
+.title-input {
+    position: relative;
+    top: 18px
+}
+
+.bottom-border {
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.footer {
+    background-color: #004D40;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    bottom: -150px;
+}
+
+.back-arrow i {
+    font-size: 50px;
+    color: black;
+}

@@ -1,0 +1,73 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'mongoose' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of C:\Users\lenovo\reviewMongo\package.json
+5 warn package.json reviewMongo@1.0.0 No description
+6 warn package.json reviewMongo@1.0.0 No repository field.
+7 warn package.json reviewMongo@1.0.0 No README data
+8 verbose readDependencies loading dependencies from C:\Users\lenovo\reviewMongo\package.json
+9 silly cache add args [ 'mongoose', null ]
+10 verbose cache add spec mongoose
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'mongoose',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'mongoose',
+11 silly cache add   rawSpec: '',
+11 silly cache add   spec: 'latest',
+11 silly cache add   type: 'tag' }
+12 silly addNamed mongoose@latest
+13 verbose addNamed "latest" is being treated as a dist-tag for mongoose
+14 info addNameTag [ 'mongoose', 'latest' ]
+15 silly mapToRegistry name mongoose
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry data Result {
+18 silly mapToRegistry   raw: 'mongoose',
+18 silly mapToRegistry   scope: null,
+18 silly mapToRegistry   name: 'mongoose',
+18 silly mapToRegistry   rawSpec: '',
+18 silly mapToRegistry   spec: 'latest',
+18 silly mapToRegistry   type: 'tag' }
+19 silly mapToRegistry uri https://registry.npmjs.org/mongoose
+20 verbose addNameTag registry:https://registry.npmjs.org/mongoose not in flight; fetching
+21 verbose request uri https://registry.npmjs.org/mongoose
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 7:56:40 PM
+24 verbose request id 55e99b30b2bf8d68
+25 http request GET https://registry.npmjs.org/mongoose
+26 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.177.103:8080
+27 info attempt registry request try #2 at 7:57:11 PM
+28 http request GET https://registry.npmjs.org/mongoose
+29 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.177.103:8080
+30 info attempt registry request try #3 at 7:58:33 PM
+31 http request GET https://registry.npmjs.org/mongoose
+32 verbose stack Error: tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.177.103:8080
+32 verbose stack     at ClientRequest.onError (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+32 verbose stack     at ClientRequest.g (events.js:260:16)
+32 verbose stack     at emitOne (events.js:77:13)
+32 verbose stack     at ClientRequest.emit (events.js:169:7)
+32 verbose stack     at Socket.socketErrorListener (_http_client.js:267:9)
+32 verbose stack     at emitOne (events.js:77:13)
+32 verbose stack     at Socket.emit (events.js:169:7)
+32 verbose stack     at emitErrorNT (net.js:1269:8)
+32 verbose stack     at nextTickCallbackWith2Args (node.js:442:9)
+32 verbose stack     at process._tickCallback (node.js:356:17)
+33 verbose cwd C:\Users\lenovo\reviewMongo
+34 error Windows_NT 10.0.14393
+35 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "mongoose"
+36 error node v4.4.7
+37 error npm  v2.15.8
+38 error code ECONNRESET
+39 error network tunneling socket could not be established, cause=connect ETIMEDOUT 192.168.177.103:8080
+39 error network This is most likely not a problem with npm itself
+39 error network and is related to network connectivity.
+39 error network In most cases you are behind a proxy or have bad network settings.
+39 error network
+39 error network If you are behind a proxy, please make sure that the
+39 error network 'proxy' config is set properly.  See: 'npm help config'
+40 verbose exit [ 1, true ]

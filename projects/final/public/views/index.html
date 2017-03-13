@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock The Vote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="Social-Delicious.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="app" ng-controller="ctrl" class='ng-cloak'>
+    <nav class="navbar navbar-default">
+        <div class="container-full">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <i class="glyphicon glyphicon-align-justify"></i>
+            </button>
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <div class="rock-the-vote">
+                        <a href="#/">Rock The Vote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-side"><a href="#/home">Home</a></li>
+                    <li class="navbar-side"><a href="#/contact">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ng-view></ng-view>
+
+    <div class="container-full footer">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="copyright">© 2017 Rock The Vote</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
