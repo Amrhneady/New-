@@ -1,18 +1,18 @@
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-var Issue = require("./models/issue")
-var Contact = require("./models/contact")
+var Issue = require("./issue")
 
 
 //include the library setup the Router
 var express = require("express");
-var menuRoutes = express.Router();
+var apiRouter = express.Router();
 
 //setup the server to handel json
 apiRouter.use(bodyParser.urlencoded({
     extended: false
 }));
 apiRouter.use(bodyParser.json());
+
 
 
 //get all data
@@ -35,7 +35,7 @@ apiRouter.get("/:id", function (req, res) {
             res.status(500).sent(err);
         } else if (data == undefined) {
             res.status(200).send({
-                "message:No such file with this id" + id
+                message: "No such file with this id" + id
             })
         } else {
             res.status(200).send({
@@ -48,7 +48,8 @@ apiRouter.get("/:id", function (req, res) {
 
 //add new data
 apiRouter.post("/", function (req, res) {
-    var newIsue = new Issue(req, body);
+    var newIsue = new Issue(req.body);
+    console.log(newIsue)
     newIsue.save(function (err, data) {
         if (err) {
             res.status(500).sent(err);
@@ -115,7 +116,7 @@ apiRouter.put("/:id", function (req, res) {
         } else {
             for (key in req.query) {
                 if (key !== "comments") {
-                    data[key] = req.query.[key];
+                    data[key] = req.query;
                 }
             }
             //to add a comment to comments array
@@ -135,4 +136,4 @@ apiRouter.put("/:id", function (req, res) {
     })
 });
 
-module.exports = menuRoutes;
+module.exports = apiRouter;

@@ -1,0 +1,30 @@
+<form name="AddIssue" class="new-issue">
+    <div class="add-issue">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="new-title">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="new-issue-fields">Title :</h2>
+                            <input placeholder="Title" class="form-control" type="text" ng-model="title" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-desc">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="new-issue-fields">Description :</h2>
+                            <textarea class="form-control" ng-model="desc" rows="10" placeholder="Description" required>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <button ng-click="newIssue(title,desc)" class="btn btn-primary" ng-disabled="AddIssue.$invalid">Add Issue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

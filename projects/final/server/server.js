@@ -16,8 +16,8 @@ mongooe.connect("mongodb://localhost/articles", function () {
 });
 
 //inport the router 
-var apiRouter = require("./routes/api.js")
-app.use("./models/issue", apiRouter)
+var apiRouter = require("./api.js")
+app.use("/issue", apiRouter)
 
 
 //setup server to handle html 
@@ -25,6 +25,9 @@ app.use(express.static(path.join(__dirname + "\\..\\public")));
 app.set("views", __dirname + "\\public\\views");
 app.engine("html", ejs.renderFile);
 app.set("view engine", "ejs");
+
+
+
 
 
 var filesRouter = require("./files.js")

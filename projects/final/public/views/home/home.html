@@ -1,20 +1,50 @@
-  <div class="row">
-        <div class="col-md-6">
-            <div ng-repeat="item in menuItems track by 
-       $index">
-                <h1>{{item.name}}</h1>
-                <p>{{item.price}} {{item.currency}}</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <input type="text" ng-model="menu.name" placeholder="enter the name">
-            <input type="number" ng-model="menu.price" placeholder="enter the price">
-            <input type="text" ng-model="menu.currency" placeholder="enter the currency">
-            <p>
-                <label>
-                    <input type="checkbox" ng-model="menu.isAvailable">Available
-                </label>
-            </p>
-            <button ng-click="addItem(menu)">Add Item</button>
+<hr>
+
+   <div class="row">
+    <div class="class=" col-md-4 ""></div>
+    <div class="class=" col-md-4 "">
+        <div ng-repeat="issue in list">
+            <h1>{{issue.title}}</h1>
+            <p>{{issue.description}}</p>
         </div>
     </div>
+    <div class="class=" col-md-4 ""></div>
+</div>
+
+<hr>
+
+
+<div class="vote-row">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="upvote">
+<button class="btn btn-info btn-sm">
+<i class="glyphicon glyphicon-thumbs-up" ng-click="upvote(issue._id, issue.upvote,issue.totalVote)">
+</i>
+</button>
+<span class="vote-num">{{issue.upvote}}</span>
+                    </span>
+                    <span class="downvote">
+<button class="btn btn-danger btn-sm">
+<i class="glyphicon glyphicon-thumbs-down" ng-click="downvote(issue._id,issue.downvote,issue.totalVote)">
+</i>
+</button>
+<span class="vote-num">{{issue.downvote}}</span>
+                    </span>
+                    <span class="comments-icon">
+<button class="btn btn-success btn-sm">
+<a href="#/oneIssue/{{issue._id}}">
+<i class="glyphicon glyphicon-comment"></i>
+</a>
+</button>
+<span class="vote-num">
+{{issue.comments.length}}  </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
